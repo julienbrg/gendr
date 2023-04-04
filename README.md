@@ -1,11 +1,8 @@
-# Another Star
+# Gendr
 
-This repo was forked from [Nexth](https://github.com/wslyvh/nexth).
+Give it a first name, the app will tell you the gender associated with it.
 
-It's a Web3 app boilerplate built with Next.js, Chakra UI, Ethers, Wagmi and ConnectKit.
-
-- Netlify: [https://another-star.netlify.app/](https://another-star.netlify.app/)
-- IPFS: [https://bafybeiaadcgdrw5pulupdykl4bmxayzx3yfqiipy73nvh5rf3rgtun47um.ipfs.w3s.link](https://bafybeiaadcgdrw5pulupdykl4bmxayzx3yfqiipy73nvh5rf3rgtun47um.ipfs.w3s.link)
+Live demo:[https://gendr.on.fleek.co/](https://gendr.on.fleek.co/)
 
 ## Install
 
@@ -25,4 +22,4 @@ You can contact me via [Element](https://matrix.to/#/@julienbrg:matrix.org), [Te
 
 ## License
 
-[GPL-3.0](https://github.com/w3hc/w3hc-web/blob/main/LICENSE)
+[GPL-3.0](https://github.com/julienbrg/gendr/blob/main/LICENSE)

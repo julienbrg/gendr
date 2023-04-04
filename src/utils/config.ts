@@ -1,9 +1,9 @@
 import { ThemingProps } from '@chakra-ui/react'
 import { goerli } from '@wagmi/chains'
 
-export const SITE_NAME = 'Another Star'
-export const SITE_DESCRIPTION = 'A Web3 app boilerplate built with Next.js, Chakra UI, Ethers, Wagmi and ConnectKit'
-export const SITE_URL = 'https://w3hc.org'
+export const SITE_NAME = 'Gendr v0.0.1'
+export const SITE_DESCRIPTION = 'Testing genderize.io API'
+export const SITE_URL = ''
 export const THEME_INITIAL_COLOR = 'dark'
 export const THEME_COLOR_SCHEME: ThemingProps['colorScheme'] = 'gray'
 export const THEME_CONFIG = {
