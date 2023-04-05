@@ -45,7 +45,7 @@ export default function Home() {
       toast({
         title: 'Données insuffisantes 😿',
         description:
-          "Le nombre d'occurences de ce prénom est trop faible, donc le résultat indiqué ne peut pas etre considéré comme fiable. Veuillez nous en excuser.",
+          "Le nombre d'occurences de ce prénom est trop faible, donc le résultat indiqué ne peut pas être considéré comme fiable. Veuillez nous en excuser.",
         status: 'warning',
         duration: 9000,
         isClosable: true,
