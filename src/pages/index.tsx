@@ -27,13 +27,45 @@ export default function Home() {
   const handleResponse = async (data: any) => {
     console.log('data:', data)
     if (data.gender === 'male') {
+      setIsCalled(true)
+
       setGender('masculin')
     } else {
+      setIsCalled(true)
+
       setGender('féminin')
     }
 
     const proba = (data.probability * 100).toFixed(0)
     setProbability(proba)
+
+    if (data.count > 3000 && data.count < 9000) {
+      setIsCalled(true)
+
+      toast({
+        title: 'Données insuffisantes 😿',
+        description:
+          "Le nombre d'occurences de ce prénom est trop faible, donc le résultat indiqué nen peut pas etre considéré comme fiable. Veuillez nous en excuser.",
+        status: 'warning',
+        duration: 9000,
+        isClosable: true,
+      })
+      setLoading(false)
+      return
+    }
+
+    if (data.count < 3000) {
+      setIsCalled(false)
+      toast({
+        title: 'Prénom inexistant 😿',
+        description: "Le prénom que vous avez indiqué n'existe probablement pas. Merci d'en choisir un autre",
+        status: 'error',
+        duration: 9000,
+        isClosable: true,
+      })
+      setLoading(false)
+      return
+    }
   }
 
   const call = async () => {
@@ -52,15 +84,13 @@ export default function Home() {
         return
       }
 
-      let response: any
       const url = 'https://api.genderize.io/?name=' + firstName
-      response = await fetch(url)
+      await fetch(url)
         .then((response) => response.json())
         .then((data) => handleResponse(data))
 
-      setIsCalled(true)
       setLoading(false)
-      play()
+      // play()
     } catch (e) {
       setLoading(false)
       console.log('error:', e)
@@ -93,7 +123,7 @@ export default function Home() {
             C&apos;est parti ! 🚀
           </Button>
         ) : (
-          <Button isLoading colorScheme="green" loadingText="Calling" variant="outline">
+          <Button isLoading colorScheme="green" loadingText="Calling..." variant="outline">
             C&apos;est parti ! 🚀
           </Button>
         )}
@@ -112,7 +142,7 @@ export default function Home() {
           </>
         )}
         <br />
-        {isCalled && (
+        {/* {isCalled && (
           <>
             <Button colorScheme="red" variant="outline" onClick={() => stop()}>
               Arrêter la musique
@@ -121,7 +151,7 @@ export default function Home() {
             <br />
             <Image height="800" width="800" alt="yin-yang" src="/yin-yang.png" />
           </>
-        )}
+        )} */}
       </main>
     </>
   )
