@@ -18,15 +18,15 @@ export function NetworkStatus() {
       <LinkComponent href={`https://github.com/julienbrg/gendr`}>
         <FaGithub />
       </LinkComponent>
-      <Badge colorScheme={GetNetworkColor(network.chain?.network)} fontSize="2xs">
+      {/* <Badge colorScheme={GetNetworkColor(network.chain?.network)} fontSize="2xs">
         {network.chain?.name ?? 'Ethereum'}
-      </Badge>
-      {explorerUrl && (
+      </Badge> */}
+      {/* {explorerUrl && (
         <LinkComponent href={explorerUrl}>
           <Text fontSize="2xs"># {block.data}</Text>
         </LinkComponent>
-      )}
-      {!explorerUrl && <Text fontSize="2xs"># {block.data}</Text>}
+      )} */}
+      {/* {!explorerUrl && <Text fontSize="2xs"># {block.data}</Text>} */}
     </Flex>
   )
 }
