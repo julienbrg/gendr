@@ -2,7 +2,7 @@
 
 Give it a first name, the app will tell you the gender associated with it.
 
-Live demo:[https://gendr.on.fleek.co/](https://gendr.on.fleek.co/)
+Live demo: [https://gendr.on.fleek.co/](https://gendr.on.fleek.co/)
 
 ## Install
 
