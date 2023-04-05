@@ -45,7 +45,7 @@ export default function Home() {
       toast({
         title: 'Données insuffisantes 😿',
         description:
-          "Le nombre d'occurences de ce prénom est trop faible, donc le résultat indiqué nen peut pas etre considéré comme fiable. Veuillez nous en excuser.",
+          "Le nombre d'occurences de ce prénom est trop faible, donc le résultat indiqué ne peut pas etre considéré comme fiable. Veuillez nous en excuser.",
         status: 'warning',
         duration: 9000,
         isClosable: true,
@@ -134,10 +134,13 @@ export default function Home() {
             <br />
             <p>
               D&apos;après{' '}
-              <LinkComponent target="blank" href={'https://genderized.io'}>
-                Genderized.io
+              <LinkComponent target="blank" href={'https://genderize.io'}>
+                Genderize.io
               </LinkComponent>
-              , <strong>{firstName}</strong> est un prénom {gender} dans {probability}% des cas.{' '}
+              ,{' '}
+              <strong>
+                {firstName} est un prénom {gender} dans {probability}% des cas.
+              </strong>{' '}
             </p>
           </>
         )}
